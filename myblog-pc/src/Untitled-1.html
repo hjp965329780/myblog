@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      height: 200px;
+      width: 200px;
+      border: 1px solid red;
+      
+    }
+    #content{
+      background: red;
+            width: 100px;
+            height: 100px;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition:all 1s;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="content"> 
+      
+    </div>
+  </div>
+  <script>
+    function addButton(){
+      var btn = document.createElement("BUTTON");
+      var o =document.getElementById("content");
+      o.append(btn);
+      btn.addEventListener("click",function(){
+        o.style.width="200px";
+        o.style.height="200px";
+      })
+    }
+    addButton();
+  </script>
+  <!-- div id container -->
+</body>
+</html>
